@@ -1,5 +1,5 @@
-# Screenshots for activity 02
-![Screenshot of Feature X](pic1.jpg)
+# Screenshots of activity 02
+![Screenshot of Feature X](ss1.png)
 
-![Screenshot of Feature X](pic2.jpg)
+![Screenshot of Feature X](ss2.png)
 

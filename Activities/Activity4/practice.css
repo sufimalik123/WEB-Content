@@ -1,0 +1,58 @@
+header{
+    margin-top: 80px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    height: 90px;
+    
+}
+
+img{
+    border-color: brown;
+    border-width: 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+.navbar{
+    color:white;
+}
+.nav-item{
+    color:white;
+
+}
+
+.navbar-toggler-icon-white {
+    color: #fff; 
+  }
+
+  .hero-section {
+    position: relative;
+    height: 100vh; 
+    background-image: url('Screenshot\ 2024-02-23\ at\ 3.03.16\ PM.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    z-index: -1; 
+    animation: kenburn 1s infinite alternate;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+
+  @keyframes kenburn {
+    0% {
+      transform: scale(1) translate(0%, 10%);
+ 
+    }
+    100% {
+      transform: scale(0.7, 1) translate(10%, 15%);
+    }
+}

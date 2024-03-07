@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {  
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            margin-top: -8px;
+            margin-bottom: 12px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signInForm = document.getElementById('signInForm');
+            const signUpForm = document.getElementById('signUpForm');
+
+            signInForm.addEventListener('submit', function (event) {
+                if (!validateSignInForm()) {
+                    event.preventDefault();
+                }
+            });
+
+            signUpForm.addEventListener('submit', function (event) {
+                if (!validateSignUpForm()) {
+                    event.preventDefault();
+                }
+            });
+
+            function validateSignInForm() {
+                const username = document.getElementById('signInUsername').value;
+                const password = document.getElementById('signInPassword').value;
+
+                if (username.trim() === '' || password.trim() === '') {
+                    alert('Username and password cannot be empty.');
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validateSignUpForm() {
+                const fields = ['firstName', 'lastName', 'email', 'username', 'password', 'confirmPassword', 'phone', 'address'];
+
+                for (const field of fields) {
+                    const value = document.getElementById(field).value.trim();
+
+                    if (value === '') {
+                        alert(`Please fill in the ${field} field.`);
+                        return false;
+                    }
+                }
+
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match.');
+                    return false;
+                }
+
+                const email = document.getElementById('email').value;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return false;
+                }
+
+                const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+                if (!passwordRegex.test(password)) {
+                    alert('Password must contain at least one numeric digit and one special character.');
+                    return false;
+                }
+
+                return true;
+            }
+        });
+    </script>
+    <title>HTML Form Validation</title>
+</head>
+<body>
+    <form id="signInForm">
+        <label for="signInUsername">Username:</label>
+        <input type="text" id="signInUsername" name="signInUsername" required>
+
+        <label for="signInPassword">Password:</label>
+        <input type="password" id="signInPassword" name="signInPassword" required>
+
+        <button type="submit">Sign In</button>
+    </form>
+
+    <br>
+
+    <form id="signUpForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

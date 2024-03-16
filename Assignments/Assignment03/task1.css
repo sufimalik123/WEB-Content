@@ -1,0 +1,229 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #343a40; /* Dark background */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff; /* White text */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* White text */
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #17a2b8; /* Light blue on hover */
+}
+
+/* Hero Section styles */
+.jumbotron {
+    background-color: #2c3e50; /* Dark grayish blue background */
+    color: #fff; /* White text */
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+}
+
+.display-4 {
+    font-size: 3rem;
+}
+
+.blinking-text {
+    color: #e74c3c; /* Red text */
+    font-weight: bold;
+    font-size: 50px;
+    animation: blink 1s infinite;
+}
+
+/* Key Achievements Section styles */
+#key-achievements {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px 0;
+}
+
+/* Services Section styles */
+#services-row {
+    background-color: #fff; /* White background */
+    padding: 40px 0;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Unique Portfolio Section styles */
+#unique-portfolio {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 40px 0;
+}
+
+.portfolio-details {
+    background-color: #ecf0f1; /* Light grayish blue background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.portfolio-details h4 {
+    color: #333; /* Dark text color */
+}
+
+.portfolio-details p {
+    color: #555; /* Medium gray text color */
+}
+
+.portfolio-buttons .btn {
+    background-color: #3498db; /* Dark blue button color */
+    color: #fff; /* White button text color */
+}
+
+.portfolio-buttons .btn-secondary {
+    background-color: #95a5a6; /* Light grayish blue button color */
+}
+
+.portfolio-buttons .btn:hover,
+.portfolio-buttons .btn-secondary:hover {
+    background-color: #2c3e50; /* Dark grayish blue hover state color */
+}
+
+.portfolio-image img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Section styles */
+#timeline-section {
+    background-color: #fff; /* White background */
+    padding: 40px 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #3498db; /* Dark blue dot color */
+    border-radius: 50%;
+}
+
+.timeline-content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.timeline-content img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section styles */
+#contact-section {
+    background-color: #2c3e50; /* Dark grayish blue background */
+    color: #3498db; /* Dark blue heading color */
+    padding: 60px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #3498db; /* Dark blue button color */
+    color: #fff; /* White button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2c3e50; /* Dark grayish blue hover state color */
+}
+
+/* Subscription Section styles */
+#subscribe-section {
+    background-color: #ecf0f1; /* Light grayish blue background color */
+    padding: 60px 0;
+}
+
+.subscribe-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subscribe-form p {
+    color: #555; /* Medium gray text color */
+}
+
+/* Footer Section styles */
+.footer {
+    background-color: #343a40; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+}
+
+/* Social Media Icons in Footer styles */
+.footer i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #3498db; /* Dark blue icon color */
+}
+
+/* Animation Keyframes */
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.portfolio-image img {
+    max-width: 100%;
+    height: auto;
+}
